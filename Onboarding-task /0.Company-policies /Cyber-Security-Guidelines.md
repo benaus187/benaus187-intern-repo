@@ -1,36 +1,35 @@
 # 🔍 Research & Learn
-1. What are the risks of using a laptop without an external monitor or keyboard?
-If poor postures are sustained for periods of time, there is potential for sprains and strains to develop, typically in the neck, back, shoulders, wrists and hands.
+1. What are common cyber security threats in a remote work environment?
+    Common cyber security threats in a remote work environment include phishing attacks, weak passwords, unsecured networks, malware, and data leakage. Additionally, risky Wi-Fi networks, personal devices, and inadequate employee training can also pose significant risks. 
 
-2. What ergonomic equipment can improve posture when working on a laptop? (e.g., laptop stands, external keyboards, ergonomic chairs)
-To improve posture while working on a laptop, consider using a combination of ergonomic equipment. Laptop stands elevate the screen to eye level, reducing neck strain, while external keyboards and mice allow for a more comfortable typing and mousing position. Ergonomic chairs with lumbar support and adjustable features can further enhance posture and reduce back pain. 
+2. What are best practices for keeping your devices and accounts secure?
+    To enhance the security of your devices and accounts, it's crucial to use strong, unique passwords, enable multi-factor authentication, and keep software updated. Be cautious of suspicious emails and links, and avoid public Wi-Fi for sensitive transactions. Regularly back up your data, and be mindful of what information you share online. 
 
-3. What adjustments should be made to monitor height, chair position, and desk setup for a healthier workspace?
-To optimize a workspace for health and productivity, adjust your monitor, chair, and desk setup as follows: Ensure your monitor is at eye level, your chair supports your back with feet flat on the floor, and your desk height allows for comfortable typing with elbows at a 90-degree angle.
+3. Why is it important to lock your computer when away from your desk?
+    Locking your computer when away from your desk is crucial for protecting sensitive information and preventing unauthorized access. It safeguards your work, personal data, and company information from potential breaches. Even a brief absence can expose your device to risks if left unlocked. 
 
-4. What are some daily habits that reduce the impact of prolonged laptop use? (e.g., movement breaks, posture checks, eye strain reduction techniques)
-To minimize the negative effects of prolonged laptop use, integrate movement breaks, posture checks, and eye strain reduction techniques into your daily routine. This includes taking frequent breaks, using the 20-20-20 rule for your eyes, ensuring proper posture, and adjusting lighting and screen settings. 
+4. How should you handle phishing attempts and suspicicous links?
+    To handle phishing attempts and suspicious links, prioritize immediate action to minimize potential damage. First, avoid clicking any links or opening attachments in suspicious emails. If you've already interacted with the link or attachment, disconnect your device from the internet to prevent further spread of malware. Then, change your passwords for any potentially compromised accounts, and report the incident to your IT department or email provider. 
 
-# 📝 Reflection
-1. What equipment changes can you make to improve your workspace setup? (e.g., using an external monitor, adjusting your chair, using a laptop stand) 
-I do have a laptop stand to adjust the eye level to my laptop and at home I have set up a healthy working space with an external monitor, ergonomic chair and my laptop stand as well.
+5. What makes a strong paswordm and why should you use a password manager?
+    A strong password is long, random, and unique. It should include a mix of uppercase and lowercase letters, numbers, and symbols. Using a password manager is recommended to securely store and manage these strong passwords, especially since they can be difficult to remember. 
 
+6. Why is two-factor authentication (2FA) important, and when should you enable it?
+    Two-factor authentication (2FA) is crucial for enhancing account security by adding an extra layer of verification beyond just a password. It significantly reduces the risk of unauthorized access, even if your password is compromised. 2FA should be enabled on all accounts where it's offered, especially those containing sensitive information like email, banking, and social media accounts. 
 
-2. What behavioural changes can you implement to improve posture and reduce strain? (e.g., sitting upright, taking regular breaks, adjusting screen height) 
-Normally, I have my ergonimic chair it can fix my back form but I have to change my behaviour at our workspace because we do not have that. On the other hand, i have to taking regular breaks and drink more water as well.
+📝 Reflection
+1. What security measures do you currently follow, and where can you improve?
+There are some security measures that I currently follow :
+    - Use of strong, unique passwords amanaged with a password manager.
+    - Two-factor authentication (2FA) enabled for all key accounts.
+    - Regular software and OS updates.
+    - Locking screen when stepping away from device.
+    - Avoiding public Wi-Fi for sensitive work.
+    - Cautious with email: don't click suspicious links or attachments.
+2. How can you make secure behaviour a habit rather than an afterthought?
+    To make secure behaviour a habit, intergrate it into my daily routine through small, consistent actions-like locking my screen when stepping away, using two-factor authentication, and storing files in encrypted clioud storage, automate security tasks where possible (e.g., software updates, backups) and set reminders for things like password changes or data clean-ups. Treat security like digital hygiene-somethign I fo regulargy not just when reminded- and stai informed with simple tips to build awareness over time.
+3. What steps will you take to ensure your passwords and accounts are secure?
+    To ensure my passwords and accounts are secure, i will use a password manager to create and store strong, unique passwords for each account. I will enable two-factor authentocation (2FA) wherever possible to add an extra layer of protection. I'll avoid reusing passwords, regularly review my account security settings, and stay alert for phising attempts or suspicious activity.
+4. What would you do if you suspected a security breach or suspicious activity on your account?
+    If I suspected a security breach or suspicious activity on my account, I would immediately change my password and enable or review two-factor authentication if it's not already active. I would check for unauthorized access or changes, log out of all devices , and report the incident to the appropriate support team or security contact. If sensitive data was involved, I'd follow my organization's incident response procedure and monitor my accounts closely for furher activity.
 
-3. How can you remind yourself to maintain good posture and take breaks throughout the day? (Hint: Use Focus Bear to schedule movement breaks!)
-I used Focus Bear app to remind me to take breaks and try to remember to maintain sitting straight.
-
-🛠️ Task
-1. Adjust your laptop setup based on ergonomic best practices.
-Done 
-
-2. Identify at least one piece of equipment that could improve your posture and comfort.
-Ergonomic chair, Monitor arm , Laptop stand, external mouse and keyboard.
-
-3. Try using posture and movement reminders for a full workday and note any improvements. (Hint: Focus Bear has built-in reminders for movement breaks!)
-Done 
-
-4. Document at least one workspace change or habit adjustment you made.
-I try to used our Focus Bear app to remind me of taking regular break.
