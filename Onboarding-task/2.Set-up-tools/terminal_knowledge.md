@@ -18,3 +18,4 @@
     source ~/.zshrc
     This command reloads the .zshrc file without restarting the terminal, which saved me a lot of time when testing theme and alias changes.
 Added a vague commit example.
+Added a well-structured commit example.
