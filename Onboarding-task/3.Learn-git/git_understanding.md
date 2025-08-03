@@ -49,3 +49,66 @@
     - It does not explain the change, slowing down future maintenance.
     - COde reviews take longer since reviewers have no context.
     - Debugging is harder because the commit history doesn't tell the story of why changes were made.
+## Understanding Git Bisect
+1. Understand git bisect:
+    git bisect is a Git command that helps find the commit that introduced a bug by doing a binary search between a known good commit and a bad commit.
+    Instead of checking every commit one by one, git bisect automatically narrows down the range of commits and tests each in half the time.
+2. Create a test scenario :
+    1. In my repo, i will create a new branch for testing 
+        git checkout -b feature/git-bisect-test
+    2. Make several commits:
+        echo "v1" > test.txt
+        git add test.txt
+        git commit -m "Initial commit v1"
+
+        echo "v2" > test.txt
+        git commit -am "Update to v2"
+
+        echo "v3" > test.txt
+        git commit -am "Update to v3"
+
+        echo "v4 - bug introduced" > test.txt
+        git commit -am "Introduce bug in v4"
+
+        echo "v5" > test.txt
+        git commit -am "Update to v5"
+    3. Decide a "bug" detection method:
+        - For example, consider a bug is a file contains "bug"
+        - Check with : 
+        grep "bug" test.txt
+3. Use git bisect to find the Bug
+    1. Start git bisect :
+        git bisect start
+        git bisect bad  # mark current commit (with bug)
+        git bisect good <commit-hash-of-known-good>
+        Example: USe the hash of v2 as the last good commit 
+    2. Git will automatically checkout a commit in between. Test for the bus:
+        - If the bug is present : 
+        git bisect bad
+        - If the bug is not present:
+        git bisect good
+    3. Continue until Git identifies the first bad commit
+    <commit-hash> is the first bad commit
+    4. End the bisect session :
+    git bisect reset 
+### Reflection 
+1. What does git bisect do?
+    git bisect is a tool in Git that helps you find the commit that introduced a bug by performing a binary search through the commit history.
+    - You mark one commit as good (bug-free) and one as bad (bug present).
+    - Git then checks out a commit halfway between them for you to test.
+    - Based on your input (git bisect good or git bisect bad), Git continues narrowing down until it finds the first commit where the bug appears.
+    In my test repo, I:
+    1. Created 5 commits (v1 → v5).
+    2. Introduced a bug in v4.
+    3. Used git bisect to identify the first bad commit.
+2. When would you use it in a real-world debugging situation?
+    I would use git bisect when:
+    - A bug is reported in a large codebase with many commits since the last known stable version.
+    - Manually reviewing each commit is too time-consuming.
+    - I need to quickly isolate the exact commit that introduced a regression or unexpected behavior.
+    For example:
+    If a feature that worked last week suddenly breaks, and the repo had 100 commits in between, git bisect can find the first breaking commit in around 7 steps (log₂(100) ≈ 7).
+3. How does it compare to manually reviewing commits?
+    - Git bisect is much faster because it uses binary search instead of checking every commit one by one.
+    - Manual review can be error-prone and very slow in large projects.
+    - With git bisect, you just run the test and mark commits good or bad, and Git handles the search efficiently.
