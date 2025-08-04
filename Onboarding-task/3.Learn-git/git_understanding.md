@@ -132,3 +132,11 @@
 ### Reflection 
 - These commands are necessary in the case of working with several developers on the project as it provides a secure way back, it enables to apply some commits and reject others, and the presence of the clear history and the possibility to understand who did what.  
 - I was surprised that 'git cherry-pick' happens to quickly show conflicts and how 'git blame' can easily indicate which set of commits in history altered each line.
+## Merge Conflicts and Conflicts resolution 
+testing conflict file 
+
+
+
+
+## Branching & Team collaboration 
+Created new branch for testing 
