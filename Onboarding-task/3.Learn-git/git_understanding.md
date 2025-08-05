@@ -133,9 +133,25 @@
 - These commands are necessary in the case of working with several developers on the project as it provides a secure way back, it enables to apply some commits and reject others, and the presence of the clear history and the possibility to understand who did what.  
 - I was surprised that 'git cherry-pick' happens to quickly show conflicts and how 'git blame' can easily indicate which set of commits in history altered each line.
 ## Merge Conflicts and Conflicts resolution 
-testing conflict file 
-
-
+### Task 
+1. Creating a branch and editing a file.
+![Git Conflict1](Git_conflict1.png)
+2. Switching back to main, making a conflicting edit in the same file, and committing it.
+![Git Conflict2](Git_conflict2.png)
+3. Merging the branch back into main.
+![Git Conflict3](Git_conflict3.png)
+### Reflection
+1. What caused the conflict?
+- The conflict happened because I edited the same line in 'test.txt' on two different branches ('main' and 'feature/merge-conflict-test')
+- Git couldn't automatically decide which change to keep.
+2. How did you resolve it?
+- I opened the file and i noticed the conflict markers.
+- I made the cision to intergrate the two modifications into one line and eliminate the indicators of the conflict.
+- I would then set up and commit resolved file.
+3. What did you learn?
+- Merge conflicts are a conflict situation that arises when two branches have edited different modifications to the same area of a file.
+- Git will not able to choose which version is correct and resolve conflicts instead they have to be solved manually.
+- With Git Desktop or VScode conflict can be settled with more ease since it displays clear indicators and paths.
 
 
 ## Branching & Team collaboration 
