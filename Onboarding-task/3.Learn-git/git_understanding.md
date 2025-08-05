@@ -139,4 +139,11 @@ testing conflict file
 
 
 ## Branching & Team collaboration 
-Created new branch for testing 
+1. Why is pushing directly to main problematic?
+    If you decide to push directly your work to main and others is also working on it, it will be conflict file after others finish their work and try to push their stuff to Git. So pushing directly to main is not an excellent idea if you want to work as a team. 
+2. How do branches help with reviewing code?
+    - It will help the reviewers can check the code whether it contains a bug before merging it to the main file directly.
+    - The change that you made on branches won't affected the main file which is already checked so you only need to check if the coding on the branch is good or not before merging to main.
+3. What happens if two people edit the same file on different branches?
+    If two people works on the same file on different branches then the change will only be show on their branches and it won't affected the others. After finish their work, they can request a PR for merging the file to main and the reviewer can change which one need to merge first or decide to keep which one or combine them together.
+i will save this stuff for now and see if it's will appear on the main .
