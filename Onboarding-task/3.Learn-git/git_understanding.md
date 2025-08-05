@@ -139,11 +139,29 @@ testing conflict file
 
 
 ## Branching & Team collaboration 
+### Task 
+![Testing Branch 1](Testing_branch1.png)
+![Testing Branch 2](Testing_branch2.png)
+### Reflection 
 1. Why is pushing directly to main problematic?
-    If you decide to push directly your work to main and others is also working on it, it will be conflict file after others finish their work and try to push their stuff to Git. So pushing directly to main is not an excellent idea if you want to work as a team. 
+    Direct pushing to main is dangerous, particularly on a group setting, since:
+    - High chances of conflicts occuring: In case two or more developers are working on a certain repository and one developer pushes directly to main, this might cause his work to be merged with what others wanted to push to main.
+    - No code review: Direct pushing to the main skips the pull request (PR) process and the review can be done by anyone, so bugs and errors could pass to production and no one could review them.
+    - Unstable main branch: This results in unstable main, where a bug directly pushed to main will be picked up by all developers merging the newest changes and can break their local development flow.
+    - Best pratice : Whenever you make changes create a new feature branch and push all the changes to this feature branch and then open a Pull Request to main as a review.
 2. How do branches help with reviewing code?
-    - It will help the reviewers can check the code whether it contains a bug before merging it to the main file directly.
-    - The change that you made on branches won't affected the main file which is already checked so you only need to check if the coding on the branch is good or not before merging to main.
+    Branches can be used to enable the developer to work independently and to make the task of code review safe and simple :
+    - Isolated changes: You work is isolated to branches that are not main so that the production code stays untouched until your changes are looked ar and merged into it.
+    - Simple code inspections: reviews under a pull request allow reviewers to take a look at all the modifications across a branch, make comments and request modifications ahead of merging.
+    - Safe experimental: Developers are not in danger of braking the main codebase by trying new features or fixes in a branch.
+    - CI/CD pipeline support: Lots of teams enable automated tests to run on their branches, so their code tests are high by the time reaches the merge.
 3. What happens if two people edit the same file on different branches?
-    If two people works on the same file on different branches then the change will only be show on their branches and it won't affected the others. After finish their work, they can request a PR for merging the file to main and the reviewer can change which one need to merge first or decide to keep which one or combine them together.
-i will save this stuff for now and see if it's will appear on the main .
+    In a situation where there are two of the developers editors of the same file in distinct branches: 
+    - The changes exitst independently until somebody creates a merge or a pull request.
+    - When a branch is merged to main, Git will attempt to automatically merge the changes 
+    - In case they have the overlap in the samelines, Git cannot make the decision on its ow of what should remain and will trigger a merge conflict.
+    - The conflict has to be figured our manually by the developers, with which lines to preserve, or merge both sets of changes.
+    Example:
+    - File.txt line 10-update by developer A in feature-A
+    - The developer B makes modification on line 10 of file.txt in feature-B
+    - Assuming the first branch is merged the second branch will receive a merge conflict and the developer has to resolve it manually to run it.
