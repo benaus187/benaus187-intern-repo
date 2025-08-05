@@ -181,3 +181,32 @@
     - File.txt line 10-update by developer A in feature-A
     - The developer B makes modification on line 10 of file.txt in feature-B
     - Assuming the first branch is merged the second branch will receive a merge conflict and the developer has to resolve it manually to run it.
+## Git Concept: Staging vs. Committing
+### Task
+1. Experiment with adding and commiting files in your repo using either:
+    - The terminal (git add/git commit)
+    - A Git desktop client (e.g., GitHub Desktop, VS Code Git integration).
+2. Modify a file and try the following:
+    - Stage it but don’t commit (git add <file> or equivalent in your client).
+    ![Git Stage1](Git_stage1.png)
+    - Check the status (git status).
+    ![Git Stage2](Git_stage2.png)
+    - Unstage the file (git reset HEAD <file> or equivalent).
+    ![Git Stage3](Git_stage3.png)
+    - Commit the file and observe the difference
+    ![Git Stage4](Git_stage4.png)
+### Reflection
+1. What is the difference between staging and committing?
+    - Staging (git add) will transfer the altered files to the staging area which is a staging ground where you arrage precisely what you want to be commited in the next commit.
+    - The operation of committing (git commit) is what saves all the staged changes permanently in the history of the repository as a unique commit ID.
+    - An example in my experiment:
+        - Once staged test.txt, it appeared in green and ready to be committed to the respository on git status.
+        - The changes only entered the Git history once Git run command git -m " Experiment: Demonstrate the different between staging and committing".
+2. Why does Git separate these two steps?
+    - It has the ability to do selective commits: you may adjust many files but only commit part of them 
+    - It is flexible and safe, being able to examine, preview or reserve changes (git reset HEAD <file>) prior to committing them.
+    - Allows efficient, rational commits: you can actually structure your changes into meaningful commits as opposed to pushing in "whatever".
+3. When would you want to stage changes without committing?
+    - When you are deploying larger features and you need/feel you want to stash-off a partial work but still goinf to edit and complete what you need to do before committing.
+    - When reviewing code, in order to ready the changes towards a clean commit that only incorporates the right amount of changes. 
+    - I have tested by staging test.txt and running; git status asking to make sure that what has been staged was correct and then committed.
