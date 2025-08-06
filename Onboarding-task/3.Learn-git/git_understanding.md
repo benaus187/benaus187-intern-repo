@@ -49,6 +49,8 @@
     - It does not explain the change, slowing down future maintenance.
     - COde reviews take longer since reviewers have no context.
     - Debugging is harder because the commit history doesn't tell the story of why changes were made.
+5. Screenshot for 3 type of test commit 
+![Screenshot of test commit](test_commit.png)
 ## Understanding Git Bisect
 1. Understand git bisect:
     git bisect is a Git command that helps find the commit that introduced a bug by doing a binary search between a known good commit and a bad commit.
