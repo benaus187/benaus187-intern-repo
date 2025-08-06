@@ -13,3 +13,9 @@
     - Tackling syntax or logic issues and getting past them.
     - Acquire and practice as much new programming rules as I can.
     - Figuring out foreign lib's or API's
+4. Screenshot of Experiments :
+    - ![Copilot Suggestion](copilot_suggestion.png)  
+    Example: During the onboarding task, I openned an activity of mine from previous semester. Then i added a new clearCart function to my e-commerce CheckoutPage.tsx which is one of my project.
+    Copilot automatically suggested checking userId before calling an API.  
+    - ![ChatGPT Debug](chatgpt_debug.png)  
+    Example: ChatGPT guided me through resolving a `git cherry-pick` conflict during my Git experiment.
