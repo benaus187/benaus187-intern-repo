@@ -42,7 +42,9 @@ When evaluating AI-generated information, follow these fact-checking tips to ens
 # 🛠️ Task
 1. Identify one task you can improve using an AI tool, and try it out.
     There is a task that would very benifit when using AI tool which is summarize a masive text resource. Sometimes we need to read a few hundred of slides or file , AI tools will be realy helpful to help us summarize the content and key point of the resources.
+    Example: I have used ChatGPT to summarise 58 sildes of powerpoint into one page 
+    ![Summary text from AI](summarise_text.png)
 2. Review the AI-generated output critically—did it require editing or fact-checking?
     It's depend on the complex of the task that we gave to AI tools. For example, an easy task like create a code text for "Hello World" Program  will be done without any errors. However; some tasks like calculating number will result minor mistakes.
 3. Document one best pratice you will follow when using AI tools at Focus Bears.
-    Done.
+    I will always anonymize sensitive data before using AI tools** and **cross-check outputs with reliable sources to avoid errors.
