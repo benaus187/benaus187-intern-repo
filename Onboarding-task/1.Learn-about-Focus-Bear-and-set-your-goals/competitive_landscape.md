@@ -19,3 +19,9 @@
     - Decrease the need of checking Focus Bear window manually
     - Permit more harmony with other obligations (meetings, classes, etc.). 
     This minor feature would make it a very useful time-blocking and organization tool to frequent time-blocking schedulers and power users. 
+5. Personal experiment :
+    I tried Routinery, which focuses on structured habit routines. I created a morning routine and scheduled it for weekdays. The app gave me visual and sensory cues to start tasks, which helped me stay on track without constantly checking my phone.
+    Here is the evidences :
+    ![Screenshot of Routinery](testapp1.PNG)
+    ![SCreenshot of Routinery](testapp2.PNG)
+    ![Screenshot of Routinery](testapp3.PNG)
