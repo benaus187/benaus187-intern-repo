@@ -85,12 +85,18 @@
     2. Git will automatically checkout a commit in between. Test for the bus:
         - If the bug is present : 
         git bisect bad
+        From my experiment : git bisect bad HEAD
         - If the bug is not present:
         git bisect good
+        From my experiment : git bisect good 5864e33
     3. Continue until Git identifies the first bad commit
     <commit-hash> is the first bad commit
     4. End the bisect session :
     git bisect reset 
+    5. Screenshot from my terminal while doing the experiment:
+    ![Screenshot of bisect command](git_bisect1.png)
+    ![Screenshot of bisect command](git_bisect2.png)
+    ![Screenshot of bisect command](git_bisect3.png)
 ### Reflection 
 1. What does git bisect do?
     git bisect is a tool in Git that helps you find the commit that introduced a bug by performing a binary search through the commit history.
@@ -101,6 +107,7 @@
     1. Created 5 commits (v1 → v5).
     2. Introduced a bug in v4.
     3. Used git bisect to identify the first bad commit.
+    The real command : git bisect bad HEAD
 2. When would you use it in a real-world debugging situation?
     I would use git bisect when:
     - A bug is reported in a large codebase with many commits since the last known stable version.
