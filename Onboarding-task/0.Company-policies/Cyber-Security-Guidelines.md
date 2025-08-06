@@ -30,6 +30,11 @@ There are some security measures that I currently follow :
     To make secure behaviour a habit, intergrate it into my daily routine through small, consistent actions-like locking my screen when stepping away, using two-factor authentication, and storing files in encrypted clioud storage, automate security tasks where possible (e.g., software updates, backups) and set reminders for things like password changes or data clean-ups. Treat security like digital hygiene-somethign I fo regulargy not just when reminded- and stai informed with simple tips to build awareness over time.
 3. What steps will you take to ensure your passwords and accounts are secure?
     To ensure my passwords and accounts are secure, i will use a password manager to create and store strong, unique passwords for each account. I will enable two-factor authentocation (2FA) wherever possible to add an extra layer of protection. I'll avoid reusing passwords, regularly review my account security settings, and stay alert for phising attempts or suspicious activity.
+    ![Screenshot for lock screen](lockscreen_mac.png)
+    ![Enable 2FA for Git](2fa_Git.png)
 4. What would you do if you suspected a security breach or suspicious activity on your account?
     If I suspected a security breach or suspicious activity on my account, I would immediately change my password and enable or review two-factor authentication if it's not already active. I would check for unauthorized access or changes, log out of all devices , and report the incident to the appropriate support team or security contact. If sensitive data was involved, I'd follow my organization's incident response procedure and monitor my accounts closely for furher activity.
-
+5. New Cybersecurity Habit at Focus Bear
+    Habit: I will start reviewing my active sessions and access logs weekly to ensure no unauthorized logins.
+    Example: On GitHub and Google Workspace, I will check “last account activity” logs and sign out unknown devices.
+    Implementation: I’ll set a recurring Monday calendar reminder to quickly review my security dashboards.
