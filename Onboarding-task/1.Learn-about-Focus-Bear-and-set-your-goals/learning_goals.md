@@ -1,11 +1,27 @@
 # Learning Goals
 1. What do you hope to learn from this internship?
-    I hope to learn how to work as a real team and industry so i will gain a real experience which is important for my future career. On the hand, i also excited to learn how collaborate with other people in developing an actual application.
+    - I hope to gain real-world experience working in a professional software development team and learn how to collaborate effectively in an Agile environment.
+    - Specifically, I want to improve my skills in React and TypeScript for frontend development, and gain a better understanding of how to work with REST APIs and Git for version control in an actual project.
 2. What skills are you most excited to develop?
-    I'm really looking to develop teamwork skills which is essential skill that I will need if I try to continue with what i'm currently working on. 
-3. What do you think you can contribute to the team?
-    Eventhough, i do not have experience or skill on coding or teamwork, I still will try my best on developing and improve our application's frontend.
-4. What is one area you feel less confident in that you’d like to improve?
-    I will looking for improve my skill and knowledge about coding and teamwork. I have experienced in many team at my university but it wasn't work well all the times. I hope i can gain some skill or knowledge to improve on my weakness.
-5. What does success in this internship look like for you?
-    The success in this intership is if i can become confident with my coding skill and won't be affraid of joining any team in the future.
+    - Technical Skills: Strengthening my React/TypeScript coding ability and learning better state management techniques like using useState and useEffect effectively.
+   - Teamwork & Communication: Practicing how to collaborate on GitHub, review pull requests, and handle merge conflicts in a team environment.
+3. Share a teamwork experience from university (what worked or didn’t):
+    - I worked on a university group project building a small web app with HTML, CSS, and JavaScript.
+    - What worked: We divided tasks clearly, and I handled the frontend interface.
+    - What didn’t: We didn’t use Git properly, which caused overwriting each other’s files and made last-minute integration stressful.
+    - I want to apply what I learn here to avoid those mistakes by using proper branching, pull requests, and code reviews.
+4. What do you think you can contribute to the team?
+    I can contribute by:
+    - Supporting frontend development and quickly implementing features in React.
+    - Testing and debugging the UI to ensure a smooth user experience.
+    - Bringing a positive attitude and willingness to learn, which helps the team move faster.
+5. What is one area you feel less confident in that you’d like to improve?
+    - I feel less confident in handling complex React components and resolving Git conflicts.
+    - During my previous university projects, I often struggled with merging changes and maintaining clean commits.
+    - I want to improve my confidence in collaborative coding so I can work smoothly with other developers.
+6. What is one personal goal or project you’d like to contribute to here?
+    I would like to implement a small feature in the Focus Bear app, such as improving a UI component or creating a new onboarding screen, and have it successfully reviewed and merged by the team.
+7. How will you measure your success in this internship?
+    - Completing at least 2–3 features or bug fixes that are merged into the main branch.
+    - Presenting my work in a sprint review or demo to the team.
+    - Becoming confident in using React and Git without fear of merge conflicts or breaking the build.
