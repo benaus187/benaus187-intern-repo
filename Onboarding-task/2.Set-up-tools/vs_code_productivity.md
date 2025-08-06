@@ -17,9 +17,12 @@
         11. control + ` -> toggle intergrated terminal
 2. Reflection 
     - The best shortcuts:  
-        The most time-saving ones are multi cursor (cmd + D, option + cmd + ↑/↓) and fast file navigation (cmd + P). 
-        I get to refactor and move freely without the use of the mouse. 
+        The most time-saving ones are multi cursor (cmd + D, option + cmd + ↑/↓) and fast file navigation (cmd + P).  They allow me to edit multiple parts of the file quickly and navigate without leaving the keyboard 
+    - Real-Life example :
+        While editting my git_understand.md file, I noticed I used the phrase commit message multiple times. By pressing cmd+D, i could select and edit all occurences at once. 
+        ![Screenshort of using shortcut](vs_code_shortcut.png)
     - How shortcuts improve productivity: 
-        - Less mousing around and context switching. 
-        - Allows a quicker way of navigating code, editing and debugging. 
-        - The exercise creates muscle memory to be efficient in coding.
+        - Less mousing around and context switching , which makes coding smoother. 
+        - Allows a quicker way of navigating code, editing and debugging across large files. 
+        - The exercise creates muscle memory to be efficient in increases my overall workflow.
+        - Debugging shortcut like f5 and f9 help me quickly start and stop debugging sessions.
