@@ -117,21 +117,32 @@
     - Purpose : Restores a specific file from 'main' to the current branch without affecting other files
     - When to use : Useful for discarding changes in a single file while keeping other local edits.
     - test result : i added a temporary line to 'test.txt' and successfully restored it from 'main' using this command.
+    ![Screenshot of command](git_checkout_main.png)
 2. Git cherry-pick <commit> 
     - Purpose : Applies the changes from a single commit to the current branch.
     - When to use : Ideal for pulling a bug fix or small feature from another branch without merging the entire branch 
     - Test result : I created a commit on 'main' and cherry-picked it to my branch.
+    ![Screenshot of command](git_cherry_pick.png)
 3. Git log 
     - Purpose : Displays the commit history for the branch.
     - When to use : To review changes, find commit hashes for cherry-pick, or understand project evolution.
-    - Test result : I used 'git log --oneline --graph --decoprate --all' to visualise branches and commits.
-4. Git blam <file>
+    - Test result : I used 'git log' to visualise branches and commits.
+    ![Screenshot of command](git_log.png)
+4. Git blame <file>
     - Purpose : shows who last modified each line and in which commmit 
     - When yo use : to trace bugs , understand code history, or assign ownership of changes.
     - Test result : i used 'git blame test.txt' to see the commits and authors for each line, including my cherry-picked commit.
+    ![Screenshot of command](git_blame.png)
 ### Reflection 
 - These commands are necessary in the case of working with several developers on the project as it provides a secure way back, it enables to apply some commits and reject others, and the presence of the clear history and the possibility to understand who did what.  
 - I was surprised that 'git cherry-pick' happens to quickly show conflicts and how 'git blame' can easily indicate which set of commits in history altered each line.
+- Personal Scenario:
+    While working on a feature branch, I accidentally deleted a helpful comment in test.txt.
+    I used git blame to find out which commit originally added that comment and who authored it.
+    Then, I used git checkout main -- test.txt to restore the file to its original state without affecting my other in-progress work.
+    This saved me from doing a full branch reset and losing unrelated changes.
+    - Key Takeaway:
+    These advanced Git commands give me control in multi-developer projects, letting me recover files, selectively apply fixes, and trace history with confidence.
 ## Merge Conflicts and Conflicts resolution 
 ### Task 
 1. Creating a branch and editing a file.
