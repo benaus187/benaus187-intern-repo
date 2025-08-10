@@ -24,13 +24,17 @@
 
 🛠️ Task
 1. Adjust your laptop setup based on ergonomic best practices.
+    ![Workspace Evidence](workspace_setup.png)
     Done 
 
 2. Identify at least one piece of equipment that could improve your posture and comfort.
     Ergonomic chair, Monitor arm , Laptop stand, external mouse and keyboard.
 
 3. Try using posture and movement reminders for a full workday and note any improvements. (Hint: Focus Bear has built-in reminders for movement breaks!)
+    I used Focus Bear app to remind me to take breaks and drink water because I'm really lazy of drinking water. For example, during one of my coding sessions, Focus Bear popped up a "Drink water!" reminder. I took a quick 2-minute stretch, walked and get a cup of water, and came back feeling more alert. This small change helped me improve my health and drinking habit.
+    ![Focus Bear Reminder Evidence](Drink_water.png)
     Done 
+    
 
 4. Document at least one workspace change or habit adjustment you made.
     I try to used our Focus Bear app to remind me of taking regular break.
