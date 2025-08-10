@@ -32,8 +32,19 @@ Agile teams can effectively collaborate across time zones and asynchronously by 
     As a front-end developer intern, I will need to perform the most essential ceremony of the day, a daily stand-up. It provides me a consistent chance to share as to what I am doing, to point out any impediments as early as possible and remain in touch with the progress of the rest of the team. Being still a newcomer to the work process and the context of the agency, such rapid feedback is extremely helpful in obtaining support and correcting the guiding focus, should it be neccesary. It is also enabling me to develop confidence as I engage in team discussions in a well-organised and not-so-stressful manner.
 # 🛠️ Task
 1. Attend a stand-up meeting and observe how updates are shared.
+    Attended the daily stand-up on 6/08/2025 via Zoom.  
+    - Format: Each team member shared what they worked on today, plans for the nextday, and blockers.  
+    - My update: Reported progress on updating the onboarding markdown files.
+    - Screenshot evidence:  
+      ![Stand-up Evidence](Standup_meeting.png)
     Done
 2. Participate in a retrospective or review past notes from one.
+    Retrospective participation (Example from previous group – ICT Project A, 16/05/2025)
+    Start doing: Finalizing design mockups early, adding validation & security checks, collecting user feedback after milestones.
+    Stop doing: Pushing to main without PRs, exposing sensitive client data, rushing work near deadlines.
+    Keep doing: Daily stand-ups, branch-based collaboration & reviews, thorough documentation, weekly team syncs.
+    Action item example: Add “re-enter password” field for signup validation, restrict sensitive data display.
+    ![Restropective evidence](Restropective.png)
     DOne
 3. Document one change you can make to improve your team collaboration.
-    I think i will try to speak and question more often so our team can understand me and we can get to know each other which is really importance to improve our working environment.
+    Going forward at Focus Bear, I will set a goal to ask at least one clarifying question in every stand-up. This ensures I fully understand tasks, signals engagement, and helps surface any misalignments early.
