@@ -9,19 +9,40 @@
 
 # 📝 Reflection
 1. Have you ever experienced or witnessed great teamwork and professionalism? What made it effective?
-    I have witnessed great teamwork on my university. I think the key thing which made up their teamwork's quality is commmunication. Most of their members are willing to share idea and help each other to improve. 
+   In one of my university's subject, we developed a web app for managing book rentals. i was responsible for the fropntednd react component.
+    - What made our teamwork effective was clear communication and defined roles.
+    - Every wekk, we hel short stand-up meetings where each member shared progress and blockers.
+    - when a teammate got stuck on API integration, others jumped in to help.
+    - Becasue of this collaboration, we finished the project on time and got greate results.
+    I plan to apply this same approach at Focus Bear- actively communicating progress and helping teammates whenever possible.
 2. What steps can you take to make sure your communication is clear, respectful, and inclusive?
-    I will avoid jargon and speak directly and respectfully without using any jargon and discourse in order to facilitate clear, respecful and inclusive communication, active listening and checking understanding. I will also remember not to interrupt by being conscious of the existing communication styles. I will also adopt an inclusive language that does not discriminate against other background against other background or abilities and ensure that everyone can contribute, particularly, in the groups.
+    - Avoid jargon and slang in written messages; write short, clear updates.
+    - Use inclusive like "we" instead of "you should.."
+    - LIsten actively in meetings and confirm understanding with phrase like, "JUst to clarify..".
+    - Respond politelt and on time in Slack to maintain trust.
 3. How can you help create a positive, fun, and professional work environment?
-    To develop a positive environment, I can express appreciation to efforts of other people, be friendly and open, and promote collaboration/ I slck at no time, handle the dealines, and demonstrate professionalism in my conduct, which trusts me. A bit of light-heartedness at the right place works fine to make the space at least more enjoyable but keeping it focused on the work targets at the same time, may it be celebrating small victories. 
+    - Focus on actions, not personality. For example: "Consider renaming this function for clarity" instead of "Your code is confusing".
+    - Assume good intent and ask for clarification before reacting defensively.
+    - Personal Example: DUring a monile app assignment, a teammate told me my UI design was "hard to navigate". I ask for examples, received suggestions, and updated my layout. The feedback improved our final grade and taught me to treat feedback as a learning opportunity.
 4. How can you prepare effectively for meetings with supervisors and colleagues?
-    My preparation will include taking a look at the meeting agenda, compiling the necessary documents or questions, and evaluating the attempys or barries that I should report on. I will be prompt, will gave noires or news, and will remain attentive during the meeting. Being prepared does not only respects the time of others but also makes the meeting productive.
+    - Read the agenda and gather all needed documents or code updates beforehand,
+    - Write down questions or blockers to discuss.
+    - Be ready to give concise progress updates to respect everyone's time.
+    - I will follow this at Focus Bear so my check-ins are always productive.
 5. What would it look like to be proactive during your internship?
-    Being proactive implies taking initiatives- clarifying and early, volunteer to assist team members or to look into a task instead of questioning. It consists in being well-organized, being proactive in predicting needs, and finding options to create value even in non-assigned areas. The responsible intern will share the lasted news and accept feedback to develop.  
+    - Volunteering to handle small bugs or documentation without waiting to be assigned.
+    - Communicating early if i see potential delays.
+    - Suggesting improvements (like a more effective workflow) instead of waiting to be asked.
+    - For example, if I notice repetitive manual tasks in React components, I'll propose refactoring them into reuseable components.
 6. How might you follow up with colleagues or supervisors if you need information/action from them? How would you escalate it further if you don't get a response and when would you escalate?
-    In case I do require an answer, a polite pursuit after an appropriate period, e.g., 12 days, through an agreed-upon channel of communication (e.g., Slack or email), will be the first thing to do. At the point where I am yet to get a response, I would resort to a direct message or may check in at a team meeting. In case any delay has affected deadlines or project progress, then I would come out and take it to the next level by informing my team lead or supervisor directorially and to the best of my knowledge and ability, giev them the details and the conseuqences of such delay of demand, preferably only after 3-5 days of delay yet undecided.
+    - Follow up after 1-2 bussiness days with a polite reminder via email or Discord.
+    - If no response and it's blocking my work, escalate after 3-5 days to my lead or supervisor.
+    - I will apply this at Focus Bear to keep tasks moving without waiting too long or overwhelming teammates.
 7. What are some things you won't do?
-    I will not neglect dealines and fail to respond to the communication of the team. I will not jump into conclusions, speak disparagingly, or claim other people work. I will also disclose privileged information and fail to follow up on documentation and allow blockers to reside. In the first place, I will not violate the level of professionalism and trust that I bear as an intern.
+    - I will not miss deadlines without communication.
+    - I will not gossip, ignore messages, or dismiss others' contributions.
+    - I will never share private company information or bypass team processes.
+    - I will not let blockers linger silently; i will escalate responsibly.
 
 # 🛠️ Task
 1. Take note of the CEO's phone number (shared in the onboarding deck) - make contact if you see major breaches of professional conduct or other issues
