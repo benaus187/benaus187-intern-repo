@@ -40,10 +40,10 @@ Agile teams can effectively collaborate across time zones and asynchronously by 
     Done
 2. Participate in a retrospective or review past notes from one.
     Retrospective participation (Example from previous group – ICT Project A, 16/05/2025)
-    Start doing: Finalizing design mockups early, adding validation & security checks, collecting user feedback after milestones.
-    Stop doing: Pushing to main without PRs, exposing sensitive client data, rushing work near deadlines.
+    - Start doing: Finalizing design mockups early, adding validation & security checks, collecting user feedback after milestones.
+    - Stop doing: Pushing to main without PRs, exposing sensitive client data, rushing work near deadlines.
     Keep doing: Daily stand-ups, branch-based collaboration & reviews, thorough documentation, weekly team syncs.
-    Action item example: Add “re-enter password” field for signup validation, restrict sensitive data display.
+    - Action item example: Add “re-enter password” field for signup validation, restrict sensitive data display.
     ![Restropective evidence](Restropective.png)
     DOne
 3. Document one change you can make to improve your team collaboration.
