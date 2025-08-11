@@ -53,3 +53,37 @@
     - Create .github/workflows/ci.yml with the content inside :
     ![Step 6.1 for creating CI workflow](step6.1.png)
     1. Make a branch, commit and push the setup :
+    ![Step 7 for creating CI workflow](step7.png)
+
+### Reflection
+
+1. What is the purpose of CI/CD?
+    CI/CD stands for Continuous Intergration and Continuous Delivery/Deployment
+    - Continuous Intergration: Every commit, code is built and tested. This assists in identifying bugs at a very early stage before the production stage.
+    - Continuous Delivery/Deployment: Code changes need to have only minimal operator intervention after testing in order to get deployed into staging or production environments via automation.
+    Purpose :
+    - Catch problems when and where you can detect them.
+    - Have code that is deployable make sure maintenance is painless.
+    - Decrease intergration issues.
+    - Be more efficient and reliable with the updates delivered.
+2. How does automating style checks improve project quality?
+    Enforcing style checks through automation (such as by Markdown linting and by spell checking) provides:
+    - Consistency: There is a style of code and documentation which is consistent so easier to read and maintain consistency.
+    - Error Prevention: Spelling and copying mistakes, the wrong formatting, and style violations are eliminated in the preceding of the merge.
+    - Efficiency: Code review requires the developers to spend less time considering the formatting problems as they would do during the code review, but look at the functionality and logic.
+    - Professionalism: Coding and records look neat and up-to-date to both internal staff and external stakeholders.
+3. What are some challenges with enforcing checks in CI/CD?
+    - Developer Frustration: Checks may be so restrictive or unclear that they hamper progress, and make developers angry.
+    - False Positives: Other times the automated tools mark things that are technically acceptable and then time will be wasted/lost trying to correct something that was never a problem in the first place.
+    - Setup and Maintenance: A CI/CD pipeline and linting require setting up and continual updates with codebase and tool changes.
+    - Performance: Computing a check on each commit or PR may be performance prohibitive unless it is optimized.
+4. How do CI/CD pipelines differ between small projects and large teams?
+    Small Projects :
+    - Less complex pipeline with less stages (e.g. lint+test+deploy).
+    - Fewer branches of complexity; tends to directly push or little PRs.
+    - Less cumbersome to jog and to service.
+    Large Team :
+    - More complicated pipelines that have more than one stage (e.g. build,lint,test,intergration tests, security scans, deploy).
+    - Several environments (dev, staging, production) where approvals must be given before getting the code into production.
+    - Increasing the use of caching, parallel jobs and artifacts storage to accelerate builds.
+    - The rigid application of the coding norms in the name of consistency with a multitude of contributors.
