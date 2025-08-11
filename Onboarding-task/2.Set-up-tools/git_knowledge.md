@@ -1,4 +1,5 @@
-# Git knowledge 
+# Git knowledge
+
 1. Have you used Git before? If so, in what context?
     Yes, I have used Git before while collaborating on coding with my friend at University and personal coding exercises.
 2. Which Git client (if any) did you choose? Why?

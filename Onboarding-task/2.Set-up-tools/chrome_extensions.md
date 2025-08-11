@@ -1,12 +1,13 @@
 # Set Up Dev Productivity Chrome Extensions
+
 1. Which extensions did you install? Why?
     1. React Developer Tools
     - Reason:To inspect React component hierarchy, props, and state in the browser.
     - Most Useful: Helped debug components in the Focus Bear app during development and verify state changes.
-    2. Redux DevTools
+    1. Redux DevTools
     - Reason: To visualize Redux state changes and actions in real-time.
     - Most Useful: Allowed me to track dispatched actions and confirm that my reducers updated the state correctly during UI testing.
-    3. Lighthouse
+    1. Lighthouse
     - Reason: To audit website performance, accessibility, SEO, and best practices.
     - Most Useful: I ran Lighthouse audits on Focus Bear’s onboarding pages to identify performance improvements and accessibility issues.
     ![Extension haven been installed](devtools.png)

@@ -1,12 +1,13 @@
-# Terminal Knowledge 
+# Terminal Knowledge
+
 1. Which terminal client did you choose? Why?
-    On my Mac, I use iTerm2 (Zsh). iTerm2 is more capable and configurable than the conventional Terminal program. It helps such features as div window, inline serach, and excellent theme/font manipulations that facilitate the development process and make it more pleasing to the eye.
+    On my Mac, I use iTerm2 (Zsh). iTerm2 is more capable and configurable than the conventional Terminal program. It helps such features as div window, inline search, and excellent theme/font manipulations that facilitate the development process and make it more pleasing to the eye.
 2. What customizations ( if any ) did you make?
     I made the following customizations:
     - Switched to the agnoster theme in my .zshrc file:
     Command : ZSH_THEME="agnoster"
     - Installed Powerline fonts so that the agnoster theme display correctly
-    Command : git clone https://github.com/powerline/fonts.git --depth=1
+    Command : git clone <https://github.com/powerline/fonts.git> --depth=1
             cd fonts
             ./install.sh
             cd ..

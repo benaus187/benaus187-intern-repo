@@ -1,4 +1,5 @@
 # 🔍 Research & Learn
+
 1. Review Focus Bear’s privacy policy and note key takeaways. (Hint: The privacy policy is available here.)
 🛡️ Who’s responsible?
     - Controller: Focus Bear Pty Ltd (ABN 59 659 843 964), based in Sandringham, VIC, Australia.
@@ -8,7 +9,7 @@
     - Cookies' scope, duration, and purpose are specified; you can disable them in your browser. International transfers use EU‑US Data Privacy Framework‑compliant services
 🤝 Legal basis & user rights
     - Data processing is based on user consent, which can be withdrawn at any time.
-    - Users (especially EU/UK/AU residents) can exercise GDPR/UK GDPR/Australian Privacy Act rights like access, rectification, erasure, portability, restriction, objection, and machine‑decision opting‑out, by contacting privacy@focusbear.io within 30–90 days. 
+    - Users (especially EU/UK/AU residents) can exercise GDPR/UK GDPR/Australian Privacy Act rights like access, rectification, erasure, portability, restriction, objection, and machine‑decision opting‑out, by contacting <privacy@focusbear.io> within 30–90 days.
     - Complaints can be lodged with OAIC (Australia) or AEPD (Spain/EU).
 💾 Retention & security
     - Data is retained only as long as needed for processing purposes; afterwards it’s blocked or deleted.
@@ -30,18 +31,20 @@
     - Billing data – payment handled via Stripe; no card details stored.
     - Profile & feedback – surveys, purchase history (anonymised).
     - Aggregate analytics – via cookies and IP; anonymised.
-    - Sensitive data – habits or survey hints regarding religion or health (ADHD/autism); double‑encrypted if collected. 
+    - Sensitive data – habits or survey hints regarding religion or health (ADHD/autism); double‑encrypted if collected.
 3. What are best practices for handling confidential data?
-    Best practices for handling confidential data include encryption, access control, secure disposal, and employee training. These measures protect sensitive information from unauthorized access, use, or disclosure. 
+    Best practices for handling confidential data include encryption, access control, secure disposal, and employee training. These measures protect sensitive information from unauthorized access, use, or disclosure.
 4. How should you respond to a suspected data breach or accidental disclosure of confidential information?
-    A suspected data breach or accidental disclosure of confidential information requires a prompt and systematic response. The core steps involve immediate containment, thorough assessment, appropriate notifications, and a review for future prevention. This process helps minimize damage, address potential harm to individuals, and prevent future occurrences. 
-# 📝 Reflection
+    A suspected data breach or accidental disclosure of confidential information requires a prompt and systematic response. The core steps involve immediate containment, thorough assessment, appropriate notifications, and a review for future prevention. This process helps minimize damage, address potential harm to individuals, and prevent future occurrences.
+
+## 📝 Reflection
+
 1. What steps can you take to ensure you handle data securely in your daily tasks?
     - Use strong, unique passwords (using passwork manager or enable two factor authentication)
-    - Lock my devide (close my laptop if i need to go away)
+    - Lock my device (close my laptop if i need to go away)
     - Be ware with fishing email or sms
     - Follow the "least privilege" principle
-    - Keep software updated 
+    - Keep software updated
     - Log out when not in use (log out if i have to use my school device)
     - Understand our organization's privacy policies.
 2. How should you store, share, and dispose of sensitive information safely?
@@ -58,13 +61,16 @@
     - Physical: Shred documents – don’t just toss them in the bin.
     - Clear old data from devices before selling, giving away, or recycling them.
 3. What are some common mistakes that lead to data privacy issues, and how can they be avoided?
-- Sharing password , reusing them or an easy password like our name or dob - Use a password manager and keep password private. 
-- Failing for fishing email - Double the sender email, avoid clicking unknow links and report suspicous email to our team.
+
+- Sharing password , reusing them or an easy password like our name or dob - Use a password manager and keep password private.
+- Failing for fishing email - Double the sender email, avoid clicking unknown links and report suspicious email to our team.
 - Storing sensitive data on unencrypted USBs - Use encryption or secure cloud storage. Never use personal USDb for compant data.
-- Printing sensitive data and leaving it unattended - Collect prinouts immediately or use secure printing.
-- Forgetting to lock our screen - Ser auto-lock timers and manually lock my screen when away. 
+- Printing sensitive data and leaving it unattended - Collect printouts immediately or use secure printing.
+- Forgetting to lock our screen - Ser auto-lock timers and manually lock my screen when away.
 - Keep outdated or unused data - Regularly audit and securely delete what's no longer needed.
-# 🛠️ Task
+
+### 🛠️ Task
+
 1. Identify at least one habit or practice you can adopt to improve data security in your role.
     I will use encrypted, secure cloud storage (e.g., OneDrive with two-factor authentication) to store and manage all sensitive project data, instead of keeping files locally or in unprotected folders.
     This ensures that data is protected from unauthorized access, especially in the event of device loss or theft, and aligns with privacy policies like those outlined by Focus Bear.
