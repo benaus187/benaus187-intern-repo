@@ -1,0 +1,22 @@
+{
+    "version": "0.2",
+    "language": "en",
+    "allowCompoundWords": true,
+    "useGitignore": true,
+    "ignorePaths": ["node_modules", ".git", "dist", "build"],
+    "words": [
+      "Focus",
+      "Bear",
+      "VSCode",
+      "TypeScript",
+      "i18n",
+      "eslint",
+      "frontend",
+      "repo",
+      "PRs",
+      "README",
+      "Copilot",
+      "Routinery"
+    ]
+  }
+  
