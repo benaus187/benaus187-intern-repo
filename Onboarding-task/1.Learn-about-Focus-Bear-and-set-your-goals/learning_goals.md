@@ -1,10 +1,11 @@
 # Learning Goals
+
 1. What do you hope to learn from this internship?
     - I hope to gain real-world experience working in a professional software development team and learn how to collaborate effectively in an Agile environment.
     - Specifically, I want to improve my skills in React and TypeScript for frontend development, and gain a better understanding of how to work with REST APIs and Git for version control in an actual project.
 2. What skills are you most excited to develop?
     - Technical Skills: Strengthening my React/TypeScript coding ability and learning better state management techniques like using useState and useEffect effectively.
-   - Teamwork & Communication: Practicing how to collaborate on GitHub, review pull requests, and handle merge conflicts in a team environment.
+    - Teamwork & Communication: Practicing how to collaborate on GitHub, review pull requests, and handle merge conflicts in a team environment.
 3. Share a teamwork experience from university (what worked or didn’t):
     - I worked on a university group project building a small web app with HTML, CSS, and JavaScript.
     - What worked: We divided tasks clearly, and I handled the frontend interface.

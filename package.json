@@ -1,0 +1,38 @@
+{
+  "name": "benaus187-intern-repo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:md": "markdownlint '**/*.md' -i node_modules -i .git",
+    "lint:spell": "cspell '**/*' --no-progress --gitignore --cache",
+    "lint": "npm run lint:md && npm run lint:spell",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint"
+    ],
+    "*": [
+      "cspell --no-progress --no-must-find-files"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benaus187/benaus187-intern-repo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benaus187/benaus187-intern-repo/issues"
+  },
+  "homepage": "https://github.com/benaus187/benaus187-intern-repo#readme",
+  "devDependencies": {
+    "cspell": "^9.2.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "markdownlint-cli": "^0.45.0"
+  }
+}
