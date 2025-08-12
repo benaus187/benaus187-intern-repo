@@ -3,7 +3,7 @@
     "language": "en",
     "allowCompoundWords": true,
     "useGitignore": true,
-    "ignorePaths": ["node_modules", ".git", "dist", "build"],
+    "ignorePaths": ["node_modules", ".git", "dist", "build","coverage/**","node_modules/**",".git/**","package-lock.json"],
     "words": [
       "Focus",
       "Bear",
