@@ -77,4 +77,47 @@
 ### Tasks - Commenting
 
 1. Research best practices for writing comments and documentation.
-something.
+    - Explain the “why”, not the “what”: Code shows what it does; comments capture intent, trade‑offs, links to tickets/specs, and non‑obvious constraints.
+    - Document contracts: Inputs/outputs, error cases, units, invariants, side effects, performance assumptions.
+    - Keep comments close to code and update them when code changes (stale comments are worse than none).
+    - Prefer self‑documenting code: good names, small functions, clear types; add comments only where names can’t carry the meaning.
+    - Use consistent format: JSDoc (TS/JS), docstrings (Python), etc. Include examples for tricky functions.
+    - Flag surprises: workarounds, TODOs with owner + issue link, security/privacy caveats.
+2. Find and example of poorly commented code and rewrite the comments to be more useful
+    - Example of poorly commented code :
+        // increase x
+        // loop stuff
+        function calc(a: number, b: number) {
+        let x = a + b
+        for (let i = 0; i < 100; i++) {
+            x += i
+        }
+        return x // return result
+        }
+    - Rewrite the comments to be more useful :
+        /**
+            Computes a base sum and adds a triangular offset.
+            Why:
+            - Used by the budgeting screen to apply a fixed offset equal to sum(0..N-1).
+            Contracts:
+            - a, b are integers (can be negative).
+            - N defaults to 100; change with env var `OFFSET_N` if needed.
+        */
+            export function sumWithOffset(a: number, b: number, N = Number(process.env.OFFSET_N ?? 100)) {
+            const base = a + b
+            // Triangular number T_(N-1) = N*(N-1)/2 (faster than a loop)
+            const offset = (N * (N - 1)) / 2
+            return base + offset
+            }
+
+### Reflection - Commenting
+
+1. When should you add comments?
+    - Non-obvious intent or domain rules ("VAT applies only if ...").
+    - Workarounds/tech debt with a link to an issue (e.g. //TODO(owner): fix#123).
+    - Security, performance, or numerical vaceats (e.g., rounding, timezone).
+    - Public or shared APIs (parameters, return values, error modes, examples).
+2. When should you avoid comments and instead improve the code?
+    - When a better name or smaller function makes the comment redundant.
+    - When the comment repeats code ("increment i by 1").
+    - WHen comments would mask a design smell-refactor first.
