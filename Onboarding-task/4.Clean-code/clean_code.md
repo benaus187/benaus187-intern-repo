@@ -575,3 +575,108 @@ Yes. After formatting:
 - Lists and headings in Markdown are uniform; long lines are wrapped; diffs are smaller and clearer.
 - JS files now have consistent indentation, quotes and semicolons, which makes the structure pop and reduces “what changed?” noise in reviews.
 - With Prettier + ESLint + CI, new changes come in already clean, so reviews focus on behavior rather than spacing.
+
+## Understanding Clean Code principles
+
+### Tasks - code principles
+
+1. Research and summarize the following clean code principles in clean_code.md:
+    1. Simplicity – Keep code as simple as possible.
+    - Prefer the simplest thing that works; avoid clever tricks.
+    - Break problems into small steps; remove dead code and unused params.
+    - Choose data structures that fit the job (e.g., Map for lookups).
+    1. Readability – Code should be easy to understand.
+    - Clear names (totalAfterTax, not t2), short functions, consistent formatting.
+    - Linear flow > deep nesting; use early returns and guard clauses.
+    - Add comments only when intent isn’t obvious from the code.
+    1. Maintainability – Future developers (including you!) should be able to work with the code easily.
+    - Single Responsibility: one module/function = one reason to change.
+    - Isolate I/O (network/DB/DOM) from pure logic → easier to test and swap.
+    - Write unit tests for core logic to prevent regressions.
+    1. Consistency – Follow style guides and project conventions.
+    - Single Responsibility: one module/function = one reason to change.
+    - Isolate I/O (network/DB/DOM) from pure logic → easier to test and swap.
+    - Write unit tests for core logic to prevent regressions.
+    1. Efficiency – Write performant, optimized code without premature over-engineering.
+    - Optimize the hot paths you can measure; don’t guess.
+    - Use O(1)/O(log n) where it matters; cache repeated work judiciously.
+    - Only micro‑optimize after profiling shows it’s worth it.
+2. Find an example of messy code online (or write one yourself) and describe why it's difficult to read.
+Messy version (hard to read)
+Problems: mixed responsibilities, magic values, deep nesting, unclear names, no validation, and duplicated logic.
+    // Calculates final price string for a cart, maybe with discount and tax,
+    // and updates a DOM element with the result.
+    function calc(c, d, t) {
+    if (!c || !c.length) {
+        document.getElementById('out').innerText = 'No items';
+        return;
+    }
+    let s = 0;
+    for (let i = 0; i < c.length; i++) {
+        const it = c[i];
+        if (it && it.price && it.qty) {
+        s = s+it.price*it.qty;
+        }
+    }
+    if (d === 'WELCOME10') s =s*0.9;
+    if (d === 'VIP20') s =s*0.8;
+    if (!t) t = 0.1;
+    const x = s*t;
+    s = s+x;
+    const res = '$'+s.toFixed(2);
+    document.getElementById('out').innerText = res;
+    }
+3. Rewrite the code in a cleaner, more structured way.
+    // --- constants ---
+    const DISCOUNTS = { WELCOME10: 0.10, VIP20: 0.20 };
+    const DEFAULT_TAX = 0.10;
+
+    // --- pure helpers (no DOM) ---
+    function ensureItemValid(item) {
+    if (!item) throw new Error('Item missing');
+    if (typeof item.price !== 'number' || item.price < 0) throw new Error('Invalid price');
+    if (!Number.isInteger(item.qty) || item.qty < 0) throw new Error('Invalid quantity');
+    }
+
+    function subtotal(items) {
+    return items.reduce((sum, it) => {
+        ensureItemValid(it);
+        return sum+it.price*it.qty;
+    }, 0);
+    }
+
+    function applyDiscount(amount, code) {
+    const pct = DISCOUNTS[code] || 0;
+    return amount*(1-pct);
+    }
+
+    function computeTotal(items, { discountCode, taxRate = DEFAULT_TAX } = {}) {
+    if (!Array.isArray(items) || items.length === 0) return 0;
+    if (taxRate < 0) throw new Error('Negative tax not allowed');
+    const sub = subtotal(items);
+    const discounted = applyDiscount(sub, discountCode);
+    return discounted+discounted*taxRate;
+    }
+
+    function formatCurrency(n) {
+    return `$${n.toFixed(2)}`;
+    }
+
+    // --- composition + DOM (thin wrapper) ---
+    export function renderCartTotal(items, opts) {
+    const el = document.getElementById('out');
+    if (!el) return;
+
+    if (!items || items.length === 0) {
+        el.innerText = 'No items';
+        return;
+    }
+
+    try {
+        const total = computeTotal(items, opts);
+        el.innerText = formatCurrency(total);
+    } catch (e) {
+        console.error(e);
+        el.innerText = 'Error calculating total';
+    }
+    }
