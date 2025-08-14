@@ -258,3 +258,68 @@
     - Maintainability: It is possible to make changes only staying at one point and keep them not related.
     - Testability: The ability to test units within logic in a more focused manner, this became much easier because it was divided into smaller units.
     - Scalability: Being able to have a neat division between UI and business logic eases the work of extending the app.
+
+## Avoiding Code Duplication
+
+### Task - code duplication
+
+1. Research the "Don't Repeat Yourself" (DRY) principle.
+    "Don't Repeat Yourself" (DRY) is a software development principle that encourages developers to avoid duplicating code in a system.
+    - When developers adhere to the DRY principle, they aim to create reusable components, functions, or modules that can be utilized in various parts of the codebase.
+    - This not only makes the code more maintainable but also minimizes the chances of errors since changes or updates only need to be made in one location.
+    - DRY is closely related to the concept of modular programming and the creation of functions, classes, or modules that encapsulate specific functionality.
+    - An alternative principle, the Single Responsibility Principle or SRP, is often mentioned in conjunction with DRY. SRP suggests that a module, class, or function should have only one reason to change, further emphasizing the need for focused, modular, and reusable code.
+    - Together, DRY and SRP contribute to creating more robust and maintainable software systems.
+2. Find a section of code in you test repo with unnecessary repetition.
+    // cart-old-a.js
+        function lineTotal(item) {
+        return item.price*item.quantity; // duplicated here
+        }
+
+        // cart-old-b.js
+        function calcOrderTotal(cart) {
+        let total = 0;
+        for (const it of cart) {
+            total += it.price*it.quantity; // duplicated again
+        }
+        return total;
+        }
+3. Refactor the code to eliminate duplication.
+    - Create a small utility module and reuse it.
+    // src/utils/money.js
+        export function lineTotal(item) {
+        if (!item || typeof item.price !== 'number' || !Number.isInteger(item.quantity)) {
+            throw new Error('Invalid cart item');
+        }
+        return item.price * item.quantity;
+        }
+
+        export function cartTotal(cart) {
+        if (!Array.isArray(cart)) throw new Error('Cart must be an array');
+        return cart.reduce((sum, it) => sum + lineTotal(it), 0);
+        }
+    - Refactor callers to import the shared functions:
+    // cart-a.js
+        import { lineTotal } from './src/utils/money.js';
+        export function subtotal(items) {
+        return items.reduce((s, it) => s + lineTotal(it), 0);
+        }
+
+        // cart-b.js
+        import { cartTotal } from './src/utils/money.js';
+        export function grandTotal(cart, taxRate = 0.1) {
+        const base = cartTotal(cart);
+        return base + base * taxRate;
+        }
+
+### Reflection - code duplication
+
+1. What were the issues with duplicated code?
+    - I found the same price × quantity calculation in multiple files (`cart-old-a.js`, `cart-old-b.js`).  
+    - Each copy lacked consistent validation, so some paths accepted invalid data (e.g., non‑numeric `price`).  
+    - Any bug fix or change (like updating tax rules or rounding) would require editing several places, risking drift and new bugs.
+2. How did refactoring improve maintainability?
+    - I extracted `lineTotal` and `cartTotal` into a single utility module (`src/utils/money.js`).  
+    - Now all callers share the same validation and logic, so fixes happen nce.  
+    - Readability improved (call sites read like intent: `cartTotal(cart)`), and test coverage is simpler and stronger.  
+    - Future changes (currency formatting, rounding rules, discounts) can be made centrally without hunting duplicates.
