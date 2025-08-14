@@ -1,5 +1,5 @@
 // price.js
-const TAX_RATE = 0.10;
+const TAX_RATE = 0.1;
 const SHIPPING_FEE = 4.99;
 
 function calcTotal(items) {
