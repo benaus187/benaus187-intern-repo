@@ -454,3 +454,69 @@
     - These pieces are written by the new orchestrator and the flow is simple to avoid scan.
     - Failure to pass tests implies exactly where to blame (math or formatting or I/O), since failures are aimed at the pure functions.
     - New discount codes, varying tax rates, several currencies, etc., can be added in the future via editing or swapping small units rather than hacking on a monolith.
+
+## Naming Variables & Functions
+
+### Task - naming
+
+1. Research best practices for naming variables and functions.
+    - Choose meaningful names
+    - The length of a name
+    - Choose searchable names
+    - Avoid negative names
+    - Don’t use prefixes
+    - Choose names that you can pronounce
+    - Be careful with optical illusions
+    - Make meaningful distinction between names
+2. Find examples of unclear variable names in an existing codebase (or write your own).
+    // cart-utils-old.js
+        export function calc(a, b, c) {
+        // a: items, b: discount code, c: tax rate
+        let s = 0;
+        for (const x of a) {
+            s += x.p*x.q;   // p = price, q = quantity
+        }
+        if (b === 'WELCOME10') s*= 0.9;
+        if (b === 'VIP20') s*= 0.8;
+        return s+s*(c ?? 0.1);
+        }
+3. Refactor the code by renaming variables/functions for better clarity.
+    // cart-utils.js
+        /**
+        *Calculate a cart total after discount and tax.
+        *@param {{price:number, quantity:number}[]} items
+        *@param {string} discountCode
+        *@param {number} [taxRate=0.1]
+        */
+        export function calculateCartTotal(items, discountCode, taxRate = 0.1) {
+        const subtotal = items.reduce((sum, item) => sum+item.price*item.quantity, 0);
+
+        const discountMap = { WELCOME10: 0.10, VIP20: 0.20 };
+        const discountPct = discountMap[discountCode] ?? 0;
+        const discounted = subtotal*(1-discountPct);
+
+        const total = discounted+discounted*taxRate;
+        return total;
+        }
+
+### Reflection - naming
+
+1. What makes a good variable or function name?
+    - Descriptive and precise: the name communicates purpose without reading the implementation (e.g., `calculateCartTotal`, `discountCode`, `taxRate`).
+    - Consistent with domain: use business terms such as `subtotal`, `lineTotal`, `receipt`.
+    - Action‑oriented for functions: verb + object (`applyDiscount`, `saveOrder`).
+    - Readable booleans: `isEmpty`, `hasItems`, `shouldRetry`.
+    - Appropriate scope length: short names for tiny local scope; full names for broader scope.
+    - No unnecessary abbreviations or noise words: avoid `a`, `b`, `obj`, `data` unless truly clear.
+2. What issues can arise from poorly named variables?
+    - Bugs from wrong assumptions (e.g., mixing up `price` vs `priceCents`).
+    - Harder onboarding: new contributors have to reverse‑engineer intent.
+    - Fragile code reviews: reviewers miss issues because names hide meaning.
+    - Low reusability: unclear functions don’t invite safe reuse.
+    - Comment debt: code needs extra comments to explain vague names.
+3. How did refactoring improve code readability?
+    I replaced vague names in a cart calculator:
+    - `calc(a, b, c)` became `calculateCartTotal(items, discountCode, taxRate)`.
+    - Temporary `s` became `subtotal`, then `discounted`, then `total`.
+    - Item fields `p` and `q` became `price` and `quantity`.
+    - Added a `discountMap` to make discount rules explicit.
