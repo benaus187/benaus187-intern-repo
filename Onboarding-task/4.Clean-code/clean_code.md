@@ -323,3 +323,134 @@
     - Now all callers share the same validation and logic, so fixes happen nce.  
     - Readability improved (call sites read like intent: `cartTotal(cart)`), and test coverage is simpler and stronger.  
     - Future changes (currency formatting, rounding rules, discounts) can be made centrally without hunting duplicates.
+
+## Writing Small, Focused Functions
+
+### Task - small, focused functions
+
+1. Research best practices for writing small, single-purpose functions.
+    - One reason to change: each function does one job (SRP).
+    - Clear inputs/outputs: pure when possible (no I/O or globals).
+    - Short: aim to fit on one screen; ~5–20 lines is a good gut check.
+    - Good names > comments: applyDiscount says more than a comment in doEverything.
+    - Composability: small pieces are easy to test and reuse.
+2. Find an example of a long, complex function in an existing codebase (or write your own).
+    // order-old.js
+        export async function processOrder(order, user, opts = {}) {
+        // 1 Validate
+        if (!order || !Array.isArray(order.items) || order.items.length === 0) {
+            throw new Error("Invalid order");
+        }
+        if (!user || !user.email) throw new Error("Missing user");
+
+        // 2 Subtotal
+        let subtotal = 0;
+        for (const it of order.items) {
+            if (!it || typeof it.price !== "number" || !Number.isInteger(it.qty)) continue;
+            subtotal += it.price * it.qty;
+        }
+
+        // 3 Discount
+        let discountPct = 0;
+        if (opts.code === "WELCOME10") discountPct = 0.1;
+        if (opts.code === "VIP20") discountPct = 0.2;
+        const discounted = subtotal * (1 - discountPct);
+
+        // 4 Tax
+        const rate = typeof opts.taxRate === "number" ? opts.taxRate : 0.1;
+        const tax = discounted * rate;
+
+        // 5 Total & receipt
+        const total = discounted + tax;
+        const receipt = `Total: $${total.toFixed(2)} (subtotal $${subtotal.toFixed(
+            2
+        )}, tax $${tax.toFixed(2)})`;
+
+        // 6 Persist (fake)
+        await fakeDbSave({ userId: user.id, order, total });
+
+        // 7 Notify (fake)
+        await fakeEmail(user.email, "Your receipt", receipt);
+
+        return { subtotal, discounted, tax, total, receipt };
+        }
+3. Refactor it into multiple smaller functions with clear responsibilities.
+    // order.js
+        export function validateOrder(order, user) {
+        if (!order || !Array.isArray(order.items) || order.items.length === 0) {
+            throw new Error("Invalid order: missing items");
+        }
+        if (!user || !user.email) throw new Error("Invalid user");
+        }
+
+        export function lineTotal(item) {
+        if (!item || typeof item.price !== "number" || !Number.isInteger(item.qty)) {
+            throw new Error("Invalid item");
+        }
+        return item.price * item.qty;
+        }
+
+        export function subtotal(items) {
+        return items.reduce((sum, it) => sum + lineTotal(it), 0);
+        }
+
+        export function applyDiscount(amount, code) {
+        const table = { WELCOME10: 0.1, VIP20: 0.2 };
+        const pct = table[code] ?? 0;
+        return amount * (1 - pct);
+        }
+
+        export function tax(amount, taxRate = 0.1) {
+        if (taxRate < 0) throw new Error("Tax rate cannot be negative");
+        return amount * taxRate;
+        }
+
+        export function formatReceipt({ subtotal, discounted, tax, total }) {
+        return `Total: $${total.toFixed(2)} (subtotal $${subtotal.toFixed(
+            2
+        )}, tax $${tax.toFixed(2)})`;
+        }
+
+        // Ports (side effects) kept thin & swappable
+        export async function saveOrder(db, payload) {
+        return db.save(payload);
+        }
+
+        export async function sendReceipt(emailer, to, subject, body) {
+        return emailer.send(to, subject, body);
+        }
+
+        // Orchestrator: wires pure pieces + side effects
+        export async function processOrder(order, user, opts, { db, emailer }) {
+        validateOrder(order, user);
+
+        const sub = subtotal(order.items);
+        const disc = applyDiscount(sub, opts?.code);
+        const t = tax(disc, opts?.taxRate ?? 0.1);
+        const total = disc + t;
+        const receipt = formatReceipt({
+            subtotal: sub,
+            discounted: disc,
+            tax: t,
+            total,
+        });
+
+        await saveOrder(db, { userId: user.id, order, total });
+        await sendReceipt(emailer, user.email, "Your receipt", receipt);
+
+        return { subtotal: sub, discounted: disc, tax: t, total, receipt };
+        }
+
+### Reflection - small, focused functions
+
+1. Why is breaking down functions beneficial?
+    - Clarity: The functions are only responsible of one task and a clear name, hence, intent is evident since there is no reading of the body.
+    - Testability: Pure, small functions (e.g. subtotal, applyDiscount, tax) can be easily unit-tested in isolation.
+    - Reusability: logic is shared and common, and no duplication is made.
+    - Invariant safety: Behavior can change (such discount rules) without editing a large, complicated function that combines validation, calculation and I/O.
+    - Separation of concerns: The business rules and side effects are explicitly separated and they are now easier.
+2. How did refactoring improve the structure of the code?
+    - I broke out a large `processOrder` routine into tiny functions: `validateOrder`, `lineTotal`, `subtotal`, `applyDiscount`, `tax`, `formatReceipt` and slim ports (`saveOrder`, `sendReceipt`).
+    - These pieces are written by the new orchestrator and the flow is simple to avoid scan.
+    - Failure to pass tests implies exactly where to blame (math or formatting or I/O), since failures are aimed at the pure functions.
+    - New discount codes, varying tax rates, several currencies, etc., can be added in the future via editing or swapping small units rather than hacking on a monolith.
