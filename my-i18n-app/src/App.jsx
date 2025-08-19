@@ -37,17 +37,29 @@
     //</main>
   //);
 //}
+//.import React from "react";
+//import UseCallbackDemo from "./components/UseCallbackDemo";
+
+//export default function App() {
+  //return (
+    //<main style={{ padding: 24 }}>
+      //<h1>React Hooks – useCallback</h1>
+      //<UseCallbackDemo />
+    //</main>
+  //);
+//}
 import React from "react";
-import UseCallbackDemo from "./components/UseCallbackDemo";
+import UseEffectDemo from "./components/UseEffectDemo";
 
 export default function App() {
   return (
     <main style={{ padding: 24 }}>
-      <h1>React Hooks – useCallback</h1>
-      <UseCallbackDemo />
+      <h1>React Hooks – useEffect</h1>
+      <UseEffectDemo />
     </main>
   );
 }
+
 
 
 

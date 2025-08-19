@@ -53,3 +53,39 @@ In short: useMemo caches results, and useCallback caches functions.
 
 1. When would useCallback not be useful?
 There is not necessarily a need to use useCallback. Memoizing may impose as much overhead as advantage, due to the small size of the function in question, and the simple tree of the component. It is most helpful when sending callback props to memoized or pure child components. When re-rendering is inexpensive, the utilization of useCallback will not result in a higher performance and may even confuse the code.
+
+## Understanding React Hooks: useEffect
+
+### Task - useEffect
+
+1. Research how useEffect works and when to use it
+useEffect lets a function component run side effects after render: subscriptions, logging, timers, network requests, DOM interactions, etc. You control when it runs via the dependency array.
+
+- useEffect(fn, []) → run once on mount, cleanup on unmount.
+- useEffect(fn, [a,b]) → run when a or b change (and cleanup before the next run).
+- useEffect(fn) (no deps) → run after every render.
+
+1. Create a component that
+
+- Logs a message when it mounts and unmounts.
+- Fetches data from an API when a button is clicked.
+- Implements a cleanup function.
+![setup component for useEffect](setup_useEffect1.png)
+![setup component for useEffect](setup_useEffect2.png)
+![setup component for useEffect](setup_useEffect3.png)
+![result of testing](test_useEffect1.png)
+![result of testing](test_useEffect2.png)
+
+### Reflection - useEffect
+
+1. When should you use useEffect instead of handling logic inside event handlers?
+React to state/prop changes or lifecycle events (mount, unmount, updates) use useEffect: e.g. syncing to external systems (subscriptions, timers, document title), or executing code because some state changed. Employ the use of event handlers on real-time user interaction (clicks, inputs). When the same state is switched caused by other actions (not only a click), then useEffect is where it should be in order to be consistent.
+2. What happens if you don’t provide a dependency array?
+The effect happens after each and every render and its cleanup acts preceding the next run. That might be accurate in certain circumstances (e.g., measuring layout on every render) but it is easy to abuse--network requests or heavy work will be repeated many times more than the goal.
+3. How can improper use of useEffect cause performance issues?
+
+- Expensive code everywhere on each render (missing or wrong deps) -> redoing work.
+- Registering timers/subscriptions without the code to clean up the registration (clearup code) → memory leaks, multiple listeners.
+- Setting off state changes within an effect that re‑triggers the exact effect → render loops.
+- Fetching on each render rather than on mount or on state change specific updates → network spam.
+The solution is to amend the dependency array correctly, pull work into event handlers where possible to do so, and never forget to a cleanup function with resources that you create.
