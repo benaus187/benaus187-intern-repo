@@ -102,3 +102,24 @@ This technique causes the code:
 - Dynamic: Because of props and state, components can react to alternate data, and context without the need to re-write the code.
 
 Summing up, components enable the construction of modular, scalable and efficient React applications.
+
+## Setting up the Environment
+
+### Task - environment
+
+1. Set up a React project with Tailwind CSS.
+![Set up project](setup_environment1.png)
+![Set up project](setup_environment2.png)
+![Set up project](setup_environment3.png)
+
+2. Run the project and ensure Tailwind is working.
+![Run the project](test_tailwind.png)
+
+3. Push a README.md file explaining how you set up the environment.
+![Setup ReadME](setup_readme.png)
+
+### Reflection - environment
+
+1. What challenges did you face during setup?
+One of the challenges which I experienced was making sure that my Tailwind, in fact, was being picked up by Vite. Initially, my classes were not working since I had unnecessarily forgotten to update paths of `content` in `tailwind.config.js`. Another problem was that I originally was encountering mistakes with `npx tailwindcss init -p` as Tailwind was not installed correctly. I fixed it by reinstalling dependencies and making sure that `tailwindcss` was present in `node_modules/.bin`.
+After everything was set up, Tailwind was fairly painless and I could see the styling change immediately when in development mode. The most important lesson was to thoroughly look in configuration files and make sure that the build tool is told where to scout Tailwind classes.
