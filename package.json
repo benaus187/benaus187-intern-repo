@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "jest --watchAll=false",
     "lint:md": "markdownlint '**/*.md' -i node_modules -i .git",
@@ -13,7 +14,8 @@
     "lint:js": "eslint . --ext .js,.mjs,.cjs",
     "lint:js:fix": "eslint . --ext .js,.mjs,.cjs --fix",
     "format": "prettier . --write",
-    "format:check": "prettier . --check"
+    "format:check": "prettier . --check",
+    "demo": "node scripts/axios-demo.mjs" 
   },
   "lint-staged": {
     "*.md": [
