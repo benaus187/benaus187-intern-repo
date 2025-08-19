@@ -39,3 +39,23 @@ With client-side routing, the changes in UI do not have to reload the entire pag
 
 1. What are some common issues when working with lists in React?
 In React, the most common mistake is inability to attach the key prop when dealing with lists. React cannot effectively keep track of what is newly added, removed, and updated without unique keys, could lead to rendering bugs and warnings. Another problem is that the array index is used as a key, which would be okay with lists that will not change, but would lead to unexpected behavior on lists that are rearranged or decreased. It is also crucial that developers make sure that list updates are processed in an immutable manner (e.g. avoid direct array mutations with setState([...items,newItem]) but use an immutable form). React won t re-render properly otherwise. Lastly, when the lists are really huge, performance may become a problem due to the unnecessary re-renders of the lists which can be alleviated using strategies such as React.memo, virtualization, or good state structuring.
+
+## Styling with Tailwind CSS
+
+### Task - styling
+
+1. Convert Counter.js to use Tailwind CSS classes instead of regular CSS.
+![Setup Style](setup_tailwind1.png)
+
+2. Create a Button component with Tailwind styling.
+![setup style](setup_tailwind2.png)
+
+3. Add hover and active states using Tailwind utilities.
+![Test tailwind](test_tailwind.png)
+
+### Reflection - styling
+
+1. What are the advantages of using Tailwind CSS?
+The emails of Tailwind CSS have the advantage that the classes are utility-first, and it is easy to style the component directly in JSX files with no need to write specific CSS. It will provide consistency throughout the project, limit the need to switch between HTML and CSS, and prevent naming collisions because you do not need to design your own class names. It also facilitates easily applying responsive designs and state based style (hover, focus, active) using built in utilities.
+2. What are some potential pitfalls?
+The biggest downside is that JSX files will have long strings of classes which can make it less readable. Tailwind also has learning curve of learning to remember utility names and when you want to customize deeply styled components you would need to extract into reusable components or you may need to change configuration. Duplication of inline utilities and hard time managing design consistency can arise when the inline utilities and the project being worked on is just too big in scale to obviate and do the work without proper organization.
