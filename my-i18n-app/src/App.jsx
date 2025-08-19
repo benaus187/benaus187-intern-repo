@@ -59,26 +59,37 @@
     //</main>
   //);
 //}
+//import React from "react";
+//import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+//import Home from "./pages/Home.jsx";
+//import Profile from "./pages/Profile.jsx";
+
+//export default function App() {
+  //return (
+    //<Router>
+      //<nav style={{ marginBottom: "20px" }}>
+        //<Link to="/" style={{ marginRight: "10px" }}>Home</Link>
+        //<Link to="/profile">Profile</Link>
+      //</nav>
+
+      //<Routes>
+        //<Route path="/" element={<Home />} />
+        //<Route path="/profile" element={<Profile />} />
+      //</Routes>
+    //</Router>
+  //);
+//}
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import Profile from "./pages/Profile.jsx";
+import TodoForm from "./components/TodoForm.jsx";
 
 export default function App() {
   return (
-    <Router>
-      <nav style={{ marginBottom: "20px" }}>
-        <Link to="/" style={{ marginRight: "10px" }}>Home</Link>
-        <Link to="/profile">Profile</Link>
-      </nav>
-
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/profile" element={<Profile />} />
-      </Routes>
-    </Router>
+    <div>
+      <TodoForm />
+    </div>
   );
 }
+
 
 
 
