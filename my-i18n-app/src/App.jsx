@@ -89,16 +89,29 @@
     //</div>
   //);
 //}
-import React from "react";
-import Counter from "./components/Counter";
+//import React from "react";
+//import Counter from "./components/Counter";
 
-export default function App() {
+//export default function App() {
+  //return (
+    //<div className="min-h-screen flex items-center justify-center bg-gray-100">
+      //<Counter />
+    //</div>
+  //);
+//}
+import React from "react";
+import HelloWorld from "./components/HelloWorld.jsx";
+
+function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <Counter />
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <HelloWorld name="Bang" />
     </div>
   );
 }
+
+export default App;
+
 
 
 
