@@ -3,16 +3,16 @@
 ## Tasks
 
 1. Research how Axios works and why it's commonly used for API calls.
-![Research about Anxios](research_anxios.png)
+![Research about Axios](research_axios.png)
 
-2. Set up an Anxios instance with the following requirement.
+2. Set up an Axios instance with the following requirement.
 
 - A base URL for API requests.
 - Default headers (including accept: "*/*" and a dynamically generated request ID).
 - Request timeouts to prevent hanging requests.
 - Request cancellation using AbortController.
-![Set Up anxios instance](setup_axios1.png)
-![Set up anxios instance](setup_axios2.png)
+![Set Up axios instance](setup_axios1.png)
+![Set up axios instance](setup_axios2.png)
 
 1. Add an Axios request interceptor that.
 
