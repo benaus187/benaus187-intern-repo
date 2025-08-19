@@ -15,15 +15,27 @@
     //</main>
   //);
 //}
+//import React from "react";
+//import ContactForm from "./components/ContactForm";
+
+//export default function App() {
+  //return (
+    //<main style={{ padding: 24 }}>
+    //  <h1>Formik + Yup Demo</h1>
+      //<ContactForm />
+    //</main>
+  //);
+//}
 import React from "react";
-import ContactForm from "./components/ContactForm";
+import BigListMemo from "./components/BigListMemo";
 
 export default function App() {
   return (
     <main style={{ padding: 24 }}>
-      <h1>Formik + Yup Demo</h1>
-      <ContactForm />
+      <h1>React Performance – useMemo</h1>
+      <BigListMemo />
     </main>
   );
 }
+
 
