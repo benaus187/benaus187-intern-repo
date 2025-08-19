@@ -79,16 +79,27 @@
     //</Router>
   //);
 //}
+//import React from "react";
+//import TodoForm from "./components/TodoForm.jsx";
+
+//export default function App() {
+  //return (
+    //<div>
+      //<TodoForm />
+    //</div>
+  //);
+//}
 import React from "react";
-import TodoForm from "./components/TodoForm.jsx";
+import Counter from "./components/Counter";
 
 export default function App() {
   return (
-    <div>
-      <TodoForm />
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <Counter />
     </div>
   );
 }
+
 
 
 
