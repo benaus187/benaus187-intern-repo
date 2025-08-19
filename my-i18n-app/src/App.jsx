@@ -48,17 +48,38 @@
     //</main>
   //);
 //}
+//import React from "react";
+//import UseEffectDemo from "./components/UseEffectDemo";
+
+//export default function App() {
+  //return (
+    //<main style={{ padding: 24 }}>
+      //<h1>React Hooks – useEffect</h1>
+      //<UseEffectDemo />
+    //</main>
+  //);
+//}
 import React from "react";
-import UseEffectDemo from "./components/UseEffectDemo";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import Profile from "./pages/Profile.jsx";
 
 export default function App() {
   return (
-    <main style={{ padding: 24 }}>
-      <h1>React Hooks – useEffect</h1>
-      <UseEffectDemo />
-    </main>
+    <Router>
+      <nav style={{ marginBottom: "20px" }}>
+        <Link to="/" style={{ marginRight: "10px" }}>Home</Link>
+        <Link to="/profile">Profile</Link>
+      </nav>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
+    </Router>
   );
 }
+
 
 
 
