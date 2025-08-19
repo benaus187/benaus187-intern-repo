@@ -37,8 +37,8 @@ Use it when you pass a callback down to memoized children (React.memo) or into h
 - Uses React DevTools to confirm when re-renders occur.
 ![Create component and test](test_callback1.png)
 ![Create component and test](test_callback2.png)
-![Create component and test](test_callback3.png)
-![Create component and test](test_callback4.png)
+![Create component and test](test_callback3.PNG)
+![Create component and test](test_callback4.PNG)
 
 ### Reflection - useCallback
 
