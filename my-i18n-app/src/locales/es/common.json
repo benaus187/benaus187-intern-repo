@@ -1,0 +1,7 @@
+{
+    "greeting": "¡Hola, {{name}}!",
+    "intro": "Bienvenido a nuestra aplicación.",
+    "items_one": "Tienes {{count}} elemento.",
+    "items_other": "Tienes {{count}} elementos."
+  }
+  
