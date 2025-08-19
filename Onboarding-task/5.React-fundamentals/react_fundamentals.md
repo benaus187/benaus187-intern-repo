@@ -80,3 +80,25 @@ The biggest downside is that JSX files will have long strings of classes which c
 - React editing state with the given setter (e.g. setCount ) is always preferable to editing the state variable in-place.
 - When we update the state we get directly (e.g. count = count + 1), then React will not notice the change since it does not know that the state has been updated. This implies that the component will not re-render, the UI cannot be updated to the new value.
 - Also, the direct mutation might cause surprising bugs, stale values, and break Reacts internal optimizations such as batching state updates. It is because by using setState (or the setter function, provided by the useState) all the time, React will make sure that the component is correctly re-rendered, and is kept in line with the state.
+
+## Understanding Components & Props
+
+### Task - components
+
+1. Create a functional component called HelloWorld.js that displays "Hello, Focus Bear!"
+![Setup component](setup_hello2.png)
+
+2. Pass a prop called name to the component and display it dynamically.
+![Test Hello](setup_hello1.png)
+
+### Reflection - components
+
+1. Why are components important in React?
+React applications are build out of components. They have allowed us to divide UI into small reusable and independent components which can be combined to form complex interfaces. We do not even need to write a single large file about the app as a whole but logics, styling, and behavior into distinct items (such as `Button`, `Header`, or `HelloWorld`).
+This technique causes the code:
+
+- Reusable: One can multiply the use of a given component.
+- Maintainable: Smaller focused elements are increased readability and debuggability.
+- Dynamic: Because of props and state, components can react to alternate data, and context without the need to re-write the code.
+
+Summing up, components enable the construction of modular, scalable and efficient React applications.
