@@ -59,3 +59,24 @@ In React, the most common mistake is inability to attach the key prop when deali
 The emails of Tailwind CSS have the advantage that the classes are utility-first, and it is easy to style the component directly in JSX files with no need to write specific CSS. It will provide consistency throughout the project, limit the need to switch between HTML and CSS, and prevent naming collisions because you do not need to design your own class names. It also facilitates easily applying responsive designs and state based style (hover, focus, active) using built in utilities.
 2. What are some potential pitfalls?
 The biggest downside is that JSX files will have long strings of classes which can make it less readable. Tailwind also has learning curve of learning to remember utility names and when you want to customize deeply styled components you would need to extract into reusable components or you may need to change configuration. Duplication of inline utilities and hard time managing design consistency can arise when the inline utilities and the project being worked on is just too big in scale to obviate and do the work without proper organization.
+
+## Handling State & User input
+
+### Task - state
+
+1. Create a component Counter.js with a button that increments a number when clicked.
+![Set up component](setup_counter.png)
+
+2. Use useState to manage the count value.
+![Set up component](setup_counter.png)
+
+3. Display the count value dynamically.
+![Testing count](test_button.png)
+
+### Reflection - state
+
+1. What happens if we modify state directly instead of using setState?
+
+- React editing state with the given setter (e.g. setCount ) is always preferable to editing the state variable in-place.
+- When we update the state we get directly (e.g. count = count + 1), then React will not notice the change since it does not know that the state has been updated. This implies that the component will not re-render, the UI cannot be updated to the new value.
+- Also, the direct mutation might cause surprising bugs, stale values, and break Reacts internal optimizations such as batching state updates. It is because by using setState (or the setter function, provided by the useState) all the time, React will make sure that the component is correctly re-rendered, and is kept in line with the state.
