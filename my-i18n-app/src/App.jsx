@@ -26,16 +26,28 @@
     //</main>
   //);
 //}
+//import React from "react";
+//import BigListMemo from "./components/BigListMemo";
+
+//export default function App() {
+  //return (
+    //<main style={{ padding: 24 }}>
+      //<h1>React Performance – useMemo</h1>
+      //<BigListMemo />
+    //</main>
+  //);
+//}
 import React from "react";
-import BigListMemo from "./components/BigListMemo";
+import UseCallbackDemo from "./components/UseCallbackDemo";
 
 export default function App() {
   return (
     <main style={{ padding: 24 }}>
-      <h1>React Performance – useMemo</h1>
-      <BigListMemo />
+      <h1>React Hooks – useCallback</h1>
+      <UseCallbackDemo />
     </main>
   );
 }
+
 
 
