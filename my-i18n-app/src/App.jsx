@@ -99,19 +99,31 @@
     //</div>
   //);
 //}
-import React from "react";
-import HelloWorld from "./components/HelloWorld.jsx";
+//import React from "react";
+//import HelloWorld from "./components/HelloWorld.jsx";
 
-function App() {
+//function App() {
+  //return (
+    //<div className="min-h-screen flex items-center justify-center bg-gray-50">
+      //<HelloWorld name="Bang" />
+    //</div>
+  //);
+//}
+
+//export default App;
+import React from "react";
+import BuggyCounter from "./components/BuggyCounter.jsx";
+import FixedCounter from "./components/FixedCounter.jsx";
+
+export default function App() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50">
-      <HelloWorld name="Bang" />
-    </div>
+    <main style={{ padding: 24, fontFamily: "system-ui" }}>
+      <BuggyCounter />
+      <hr />
+      <FixedCounter />
+    </main>
   );
 }
-
-export default App;
-
 
 
 
