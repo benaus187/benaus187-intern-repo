@@ -124,16 +124,30 @@
     //</main>
   //);
 //}
-import Header from './components/Header';
-import CounterView from './components/CounterView';
+//import Header from './components/Header';
+//import CounterView from './components/CounterView';
+//import React from "react";
+
+//export default function App() {
+  //return (
+    //<>
+      //<Header />
+      //<main>
+        //<CounterView />
+      //</main>
+    //</>
+  //)
+//}
+import Counter from './components/Counter'
 import React from "react";
 
 export default function App() {
   return (
     <>
-      <Header />
-      <main>
-        <CounterView />
+      {/* <Header /> */}
+      <main style={{ padding: 16 }}>
+        <h1>Redux Counter</h1>
+        <Counter />
       </main>
     </>
   )
