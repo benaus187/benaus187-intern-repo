@@ -36,7 +36,6 @@ export default function UseEffectDemo() {
         setStatus("loading");
         setData(null);
 
-        // sample API; swap to your own if needed
         const res = await fetch(
           "https://jsonplaceholder.typicode.com/todos/1",
           { signal: controller.signal }
