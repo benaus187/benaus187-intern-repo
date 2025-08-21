@@ -111,19 +111,34 @@
 //}
 
 //export default App;
+//import React from "react";
+//import BuggyCounter from "./components/BuggyCounter.jsx";
+//import FixedCounter from "./components/FixedCounter.jsx";
+
+//export default function App() {
+  //return (
+    //<main style={{ padding: 24, fontFamily: "system-ui" }}>
+      //<BuggyCounter />
+      //<hr />
+      //<FixedCounter />
+    //</main>
+  //);
+//}
+import Header from './components/Header';
+import CounterView from './components/CounterView';
 import React from "react";
-import BuggyCounter from "./components/BuggyCounter.jsx";
-import FixedCounter from "./components/FixedCounter.jsx";
 
 export default function App() {
   return (
-    <main style={{ padding: 24, fontFamily: "system-ui" }}>
-      <BuggyCounter />
-      <hr />
-      <FixedCounter />
-    </main>
-  );
+    <>
+      <Header />
+      <main>
+        <CounterView />
+      </main>
+    </>
+  )
 }
+
 
 
 
