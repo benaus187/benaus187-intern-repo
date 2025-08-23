@@ -20,7 +20,9 @@
 
 1. Check out Focus Bear’s Kanban board and note how tasks are structured. (Hint: Look in GitHub Projects.)
    The task have been structured in several column based on the priorities of the task.
+   ![My kanban board](kanban_board.png)
 2. Move at least one task through the Kanban process and update its status correctly.
-   Not yet.
+   I move two tasks which are task #58 and #18 from In Progress to Done.
+   ![My Updated Kanban Board](Kanban_board1.png)
 3. Identify one way you can improve task tracking in your role.
    In order to better track the tasks, it would be beneficial to add e.g. clear acceptance criteria or how to track in checklist items in each card. This is helpful to make the tasks completed and impartially- this is partically helpful when used in design or development steps in which Done may have various definitions by various individuals. Adding such remarks as "Component visually matches Figma," or "Accessibility tested" or "Written tests in place" would make it clearer and more consistent to come. To improve task tracking, adding clear acceptance criteria or checklist items directly in each card would help. This ensures tasks are done thoroughly and objectively—especially useful for design or development steps where “Done” can mean different things to different people. Including criteria like “Component visually matches Figma,” “Accessibility tested,” or “Written tests in place” would make it clearer and more consistent to complete these requirements.

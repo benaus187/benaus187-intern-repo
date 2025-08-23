@@ -31,6 +31,12 @@
    Example: I have used ChatGPT to summarise 58 slides of powerpoint into one page
    ![Summary text from AI](summarise_text.png)
 2. Review the AI-generated output critically—did it require editing or fact-checking?
-   It's depend on the complex of the task that we gave to AI tools. For example, an easy task like create a code text for "Hello World" Program will be done without any errors. However; some tasks like calculating number will result minor mistakes.
+   Yes. While ChatGPT provided a good starting point, it missed some important details and occasionally phrased things too generally.
+
+   - Example before (AI output): “The project faced challenges with deadlines and resource allocation.”
+   - After my edits: “In Sprint 2, the project failed to meet two important deadlines because of the complexity of the authentication module that was underestimated and insufficient resources of the backend.”
+
+   This editorial clarified what was not clear about AI. I also updated some figures: ChatGPT originally summarized that there were approximately 60 slides, which I has corrected to 58 slides. I edited spelling and syntax to make it correct.
+   Overall, AI helped speed up the summarization, but it still required manual refinement to add precision and remove small inaccuracies.
 3. Document one best pratice you will follow when using AI tools at Focus Bears.
    I will always anonymize sensitive data before using AI tools**and**cross-check outputs with reliable sources to avoid errors.
