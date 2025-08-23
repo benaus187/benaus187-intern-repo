@@ -93,3 +93,28 @@ Mocking allows fast, deterministic and isolated tests. You sideline network flak
 - Timing: debounce/throttling or timers should be considered (in some cases fake timers).
 - Jest setup: No test-related legibility in missing @testing-library/jest-dom or bizarre Jest environment (jsdom) errors.
 - Over-mocking: Over-teasing may turn into ridiculing \ to avoid this, make your mocking excuse bare.
+
+## Introduction to Unit Testing with Jest
+
+### Task - introduction
+
+1. Research what Jest is and why unit tests are important.
+![Research for Jest](research_jest1.png)
+
+2. Set up Jest in your React project (if not already included).
+I already did in the previous tasks
+
+3. Write a simple test for a utility function (e.g., a function that adds two numbers).
+![setup simple function](setup_simple_function.png)
+![setup test for function](setup_test_unit_jest.png)
+
+4. Run the test and check that it passes.
+![Test result](test_unit.png)
+
+### Reflection - introduction
+
+1. Why is automated testing important in software development?
+Automated tests give quick, repeatable assurance that softwares code continues to operate as exposure. They make regressions rare, and can give a sense of security when refactoring, and makes a design better as they are easier to think of as smaller, testable subunits. Teams bind them into a contract that stipulates how to behave, and this eliminates unintentional breaches when collaborating with each other.
+
+2. What did you find challenging when writing your first Jest test?
+The complicated part was getting the environment (Jest + Babel + jsdom) to work so that ES modules and JSX transform correctly. Then it was some time until clear assertion and the setting up of tests (Arrange -Act -Assert) came clear. After I had the config correct it was mostly easy to write short, precise tests (one behavior at a time).
