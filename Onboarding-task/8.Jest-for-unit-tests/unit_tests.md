@@ -57,3 +57,39 @@ Mocking allows fast, deterministic and isolated tests. You sideline network flak
 - Leaky mocks: failure to put global.fetch/module mocks back to their initial state between tests can result in inter-test contamination.
 - Implementation over behavior: It makes tests fragile to assert on what is not visible (or visible) on the user interface. Follow the user interface. prefer what the user sees.
 - Use of real timeouts: long setTimeouts make the tests slow; when possible, use resolved promises or fake timers.
+
+## Testing React Components with Jest & React Testing Library
+
+### Tasks - react
+
+1. Research how React Testing Library works with Jest.
+![Research for React testing](research_react_test.png)
+
+2. Create a simple React component that displays a message.
+![Set up library](setup_react_library.png)
+![Set up component](setup_simple_component.png)
+
+3. Write a test that checks if the component renders correctly.
+![Set up test to check render](setup_test_render.png)
+
+4. Write a test that simulates user interaction (e.g., clicking a button).
+![Set up test for user interaction](setup_test_click.png)
+
+5. Run the tests and check that they pass.
+![Test result](test_react.png)
+
+### Reflection - react
+
+1. What are the benefits of using React Testing Library instead of testing implementation details?
+
+- User-centric: Tests make statements about user level things, e.g. text, roles, labels.
+- Robust to refactors: Tests should not break when we are changing the internal markup or state shape as long as the behavior is unchanged.
+- Accessibility aligned: Role / label-based queries are implicitly more accessible in terms of UI.
+- Less fragile: You do not test private props/state or class names that tend up to be churning.
+
+1. What challenges did you encounter when simulating user interaction?
+
+- Async updates: interaction usually leads to state update/async effect; not remembering to await user.click(...); or use of findBy.../waitFor, can actually cause such a test to become flaky.
+- Timing: debounce/throttling or timers should be considered (in some cases fake timers).
+- Jest setup: No test-related legibility in missing @testing-library/jest-dom or bizarre Jest environment (jsdom) errors.
+- Over-mocking: Over-teasing may turn into ridiculing \ to avoid this, make your mocking excuse bare.
